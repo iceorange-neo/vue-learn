@@ -1,4 +1,5 @@
-#Learn_one
+# Vue-Learn
+## Learn_one
 1、今天主要学习了为什么需要使用Vue.js，以及后端开发人员怎样学习Vue.js框架。回顾了关于JavasScript、JQuery相关的知识。
 2、在前端概念以及后端概念中的Controller的异同点（需要理解）
 3、Vue.js的版本选择
@@ -9,4 +10,4 @@
 8、插值表达式、以及简单的vue指令属性的使用。
 
 
-#learn_two
+## learn_two
