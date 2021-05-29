@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../lib/vue.js"></script>
+
+</head>
+<body>
+
+    <div id="app">
+        <!--
+            以下input标签对value属性的值，使用vm对象，由vm对象将
+            将data中的信息动态赋予到该value属性值当中。
+            必须使用v-bind指令属性来完成。
+            1）、需要将v-bind：加在需要绑定的属性的前面
+        -->
+        <input type="text" v-bind:value="str1" />
+        <p v-bind:title="str2" >content...</p>
+        <input type="button" value="submit" :title="str3+'Hello Vue'" />
+    </div>
+    <script type="text/javascript">
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                "str1": "aaa",
+                "str2": "bbb",
+                "str3": "ccc"
+            }
+        })
+    </script>
+</body>
+</html>

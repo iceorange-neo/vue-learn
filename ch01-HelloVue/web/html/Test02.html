@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../lib/vue.js"></script>
+    <style>
+        [v-cloak]{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="app">
+        <!--
+            在Vue.js中，为了为页面中的元素渲染值（为前端标签对中的内容赋值）
+            可以使用三种形式：
+                插值表达式
+                v-text
+                v-html
+        -->
+        <!-- 插值表达式为标签对中的内容赋值 -->
+        <p v-cloak>=========={{str1}}==========</p>
+        <!-- v-text -->
+        <p v-text="str2">=========</p>
+        <!-- v-html -->
+        <p v-html="str3">=======</p>
+    </div>
+    <script typre="text/javascript">
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                "str1": "插值表达式",
+                "str2": "v-text",
+                "str3" : "v-html"
+            }
+        })
+    </script>
+</body>
+</html>

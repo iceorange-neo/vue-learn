@@ -5,6 +5,16 @@
     <title>Document</title>
     <!-- 引入vue.js框架 -->
     <script src="../lib/vue.js"></script>
+
+    <!-- 解决插值表达式闪烁问题：
+        1、加入style标签，给定v-cloak，设置属性display为none：为不可见
+        2、在使用了插值表达式的标签处引入v-cloak属性
+     -->
+    <style>
+        [v-cloak]{
+            display: none;
+        }
+    </style>
 </head>
 <body>
 <!-- 在外层标签div中引入id属性值，将来vue.js会通过该id，找到需要操作的元素 -->
@@ -13,8 +23,10 @@
 
     <!-- 在前端页面元素的部分，其中的内容我们暂时以插值表达式的形式来呈现 -->
     <!-- 在两对p标签中分别引入了插值表达式，相当于将p标签对中的内容写活了，内容以变量的形式存在 -->
-    <p>{{str1}}</p>
-    <p>{{str2}}</p>
+
+
+    <p v-cloak>{{str1}}</p>
+    <p v-cloak>{{str2}}</p>
 </div>
 
 <script>
