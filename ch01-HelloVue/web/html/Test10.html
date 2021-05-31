@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../lib/vue.js"></script>
+</head>
+<body>
+    <div id="app" style="background-color: red;width: 200px;height: 200px" @click="outDivEvent">
+        <div style="background-color: black;width: 100px;height: 100px" @click.self="innerDivEvent">
+            <input type="button" value="点击" @click="buttonEvent" />
+        </div>
+    </div>
+    <script type="text/javascript">
+        var vm = new Vue({
+            el: "#app",
+            data: {
+
+            },
+            methods: {
+                outDivEvent(){
+                    window.alert("触发外层div点击事件");
+                },
+                innerDivEvent() {
+                    window.alert("触发内层div点击事件");
+                },
+                buttonEvent(){
+                    window.alert("按钮点击事件触发");
+                }
+            }
+        });
+
+    </script>
+
+</body>
+</html>

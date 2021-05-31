@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../lib/vue.js"></script>
+</head>
+<body>
+    <div id="app" style="background-color: red;width: 200px;height: 200px" @click.capture="outDivEvent">
+        <div style="background-color: blue;width: 100px;height: 100px" @click="innerDivEvent">
+
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var vm = new Vue({
+            el: "#app",
+            data:{},
+            methods: {
+                outDivEvent(){
+                    window.alert("触发外层div事件");
+                },
+                innerDivEvent(){
+                    window.alert("触发内存div事件");
+                }
+            }
+        });
+    </script>
+</body>
+</html>
