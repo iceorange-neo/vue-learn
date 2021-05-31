@@ -1,4 +1,6 @@
 # Vue-Learn
+## remark 
+关于整个Vue框架详细学习路线以及笔记在项目的/web/doc/Vue框架专题.docx
 ## Learn_one
 1、今天主要学习了为什么需要使用Vue.js，以及后端开发人员怎样学习Vue.js框架。回顾了关于JavasScript、JQuery相关的知识。
 2、在前端概念以及后端概念中的Controller的异同点（需要理解）
